@@ -6,14 +6,14 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Class incidents
+ * Class Incident
  * @package App\Models
- * @version September 12, 2019, 12:32 pm UTC
+ * @version September 22, 2019, 9:07 am UTC
  *
- * @property \Illuminate\Database\Eloquent\Collection detailsIncidents
+ * @property \Illuminate\Database\Eloquent\Collection userIncidents
  * @property string nama
  */
-class incidents extends Model
+class Incident extends Model
 {
     use SoftDeletes;
 
@@ -52,8 +52,8 @@ class incidents extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      **/
-    public function detailsIncidents()
+    public function userIncidents()
     {
-        return $this->hasMany(\App\Models\DetailsIncident::class, 'incident_id');
+        return $this->hasMany(\App\Models\UserIncident::class, 'incident_id');
     }
 }

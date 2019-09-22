@@ -3,20 +3,15 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Incident
+            User Incident
         </h1>
     </section>
     <div class="content">
-        @include('adminlte-templates::common.errors')
         <div class="box box-primary">
-
             <div class="box-body">
-                <div class="row">
-                    {!! Form::open(['route' => 'incidents.store']) !!}
-
-                        @include('incidents.fields')
-
-                    {!! Form::close() !!}
+                <div class="row" style="padding-left: 20px">
+                    @include('user_incidents.show_fields')
+                    <a href="{!! route('userIncidents.index') !!}" class="btn btn-default">Back</a>
                 </div>
             </div>
         </div>

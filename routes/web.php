@@ -49,3 +49,7 @@ Route::resource('dataUsers', 'data_usersController');
 Route::get('/maps', function () {
     return view('bootstrap.index');
 });
+
+Route::resource('incidents', 'IncidentController');
+
+Route::resource('userIncidents', 'UserIncidentController');
