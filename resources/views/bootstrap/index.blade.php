@@ -57,6 +57,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     id: 'mapbox.streets',
     accessToken: 'pk.eyJ1IjoiZGVzbml0YWFzcHJpeWFuaSIsImEiOiJjazB1bGp4NHEwN241M2dudG92cHE5b3g0In0.enzd93Ap1sIq1GiS4UTVag'
 }).addTo(map);
+var marker = L.marker([-0.5089931, 116.8953185]).addTo(map);
 </script>
 
 
